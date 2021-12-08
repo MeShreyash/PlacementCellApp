@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tnp/screens/login/adminLogin.dart';
 import 'package:tnp/screens/login/login.dart';
 import 'package:tnp/screens/login/registration.dart';
 import 'package:tnp/widgets/themes.dart';
@@ -45,100 +46,28 @@ class StartState extends State<UserAdmin_Page> {
                   width: 180,
                 ),
               ),
-              // Container(
-              //   margin: EdgeInsets.only(
-              //     right: 20,
-              //   ),
-              //   alignment: Alignment.bottomRight,
-              //   child: Text(
-              //     "Choose One",
-              //     style: TextStyle(fontSize: 30, color: Colors.white),
-              //   ),
-              // )
+              Container(
+                margin: EdgeInsets.only(
+                  right: 20,
+                ),
+                alignment: Alignment.bottomRight,
+                child: Text(
+                  "Choose One",
+                  style: TextStyle(fontSize: 30, color: Colors.white),
+                ),
+              )
             ],
           )),
         ),
-        // Container(
-        //   alignment: Alignment.center,
-        //   margin: EdgeInsets.only(left: 20, right: 20, top: 50),
-        //   padding: EdgeInsets.only(left: 20, right: 20),
-        //   height: 54,
-        //   decoration: BoxDecoration(
-        //     borderRadius: BorderRadius.circular(50),
-        //     color: Colors.grey[200],
-        //     boxShadow: [
-        //       BoxShadow(
-        //           offset: Offset(0, 10),
-        //           blurRadius: 50,
-        //           color: Color(0xffEEEEEE)),
-        //     ],
-        //   ),
-        //   child: TextField(
-        //     cursorColor: MyThemes.yellowColor,
-        //     decoration: InputDecoration(
-        //       icon: Icon(
-        //         Icons.email,
-        //         color: MyThemes.yellowColor,
-        //       ),
-        //       hintText: "Enter Email",
-        //       enabledBorder: InputBorder.none,
-        //       focusedBorder: InputBorder.none,
-        //     ),
-        //   ),
-        // ),
-        // Container(
-        //   alignment: Alignment.center,
-        //   margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-        //   padding: EdgeInsets.only(left: 20, right: 20),
-        //   height: 54,
-        //   decoration: BoxDecoration(
-        //     borderRadius: BorderRadius.circular(50),
-        //     color: Color(0xffEEEEEE),
-        //     boxShadow: [
-        //       BoxShadow(
-        //           offset: Offset(0, 20),
-        //           blurRadius: 100,
-        //           color: Color(0xffEEEEEE)),
-        //     ],
-        //   ),
-        //   child: TextField(
-        //     cursorColor: MyThemes.yellowColor,
-        //     decoration: InputDecoration(
-        //       focusColor: MyThemes.yellowColor,
-        //       icon: Icon(
-        //         Icons.vpn_key,
-        //         color: MyThemes.yellowColor,
-        //       ),
-        //       hintText: "Enter Password",
-        //       enabledBorder: InputBorder.none,
-        //       focusedBorder: InputBorder.none,
-        //     ),
-        //   ),
-        // ),
-        // Container(
-        //   margin: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-        //   alignment: Alignment.centerRight,
-        //   child: GestureDetector(
-        //     onTap: () {
-        //       // Write Click Listener Code Here
-        //     },
-        //     child: Text(
-        //       "Forget Password?",
-        //       style: TextStyle(fontSize: 15),
-        //     ),
-        //   ),
-        // ),
-
         Container(
           margin: EdgeInsets.fromLTRB(20, 60, 200, 0),
           padding: EdgeInsets.fromLTRB(20, 20, 200, 0),
         ),
-
         GestureDetector(
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LoginScreen()),
+              MaterialPageRoute(builder: (context) => AdminLoginScreen()),
             );
             // Write Click Listener Code Here.
           },
@@ -167,14 +96,12 @@ class StartState extends State<UserAdmin_Page> {
             ),
           ),
         ),
-
         Container(
           child: Text(
             "OR",
             style: TextStyle(fontSize: 25, color: Colors.black),
           ),
         ),
-
         GestureDetector(
           onTap: () {
             Navigator.push(
@@ -207,29 +134,6 @@ class StartState extends State<UserAdmin_Page> {
             ),
           ),
         ),
-
-        // Container(
-        //   child: Row(
-        //     mainAxisAlignment: MainAxisAlignment.center,
-        //     children: [
-        //       Text("Don't Have Any Account?  "),
-        //       GestureDetector(
-        //         child: Text(
-        //           "Register Now",
-        //           style: TextStyle(color: MyThemes.yellowColor),
-        //         ),
-        //         onTap: () {
-        //           // Write Tap Code Here.
-        //           Navigator.push(
-        //               context,
-        //               MaterialPageRoute(
-        //                 builder: (context) => RegistrationScreen(),
-        //               ));
-        //         },
-        //       )
-        //     ],
-        //   ),
-        // )
       ],
     )));
   }

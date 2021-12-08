@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:tnp/screens/login/registration.dart';
 import 'package:tnp/widgets/themes.dart';
 
-class StudentLoginScreen extends StatefulWidget {
-  const StudentLoginScreen({Key? key}) : super(key: key);
+class AdminLoginScreen extends StatefulWidget {
+  const AdminLoginScreen({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => StartState();
 }
 
-class StartState extends State<StudentLoginScreen> {
+class StartState extends State<AdminLoginScreen> {
   @override
   Widget build(BuildContext context) {
     return initWidget();
@@ -24,9 +24,9 @@ class StartState extends State<StudentLoginScreen> {
           height: 300,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.only(bottomLeft: Radius.circular(90)),
-            color: MyThemes.blueColor,
+            color: MyThemes.yellowColor,
             gradient: LinearGradient(
-              colors: [(new Color(0xff30AAB0)), new Color(0xff4FC8CF)],
+              colors: [(new Color(0xFFF2C202)), new Color(0xFFFDD738)],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),
@@ -50,7 +50,7 @@ class StartState extends State<StudentLoginScreen> {
                 ),
                 alignment: Alignment.bottomRight,
                 child: Text(
-                  "Student Login",
+                  "Admin Login",
                   style: TextStyle(fontSize: 40, color: Colors.white),
                 ),
               )
@@ -77,7 +77,7 @@ class StartState extends State<StudentLoginScreen> {
             decoration: InputDecoration(
               icon: Icon(
                 Icons.email,
-                color: MyThemes.blueColor,
+                color: MyThemes.yellowColor,
               ),
               hintText: "Enter Email",
               enabledBorder: InputBorder.none,
@@ -106,7 +106,7 @@ class StartState extends State<StudentLoginScreen> {
               focusColor: MyThemes.yellowColor,
               icon: Icon(
                 Icons.vpn_key,
-                color: MyThemes.blueColor,
+                color: MyThemes.yellowColor,
               ),
               hintText: "Enter Password",
               enabledBorder: InputBorder.none,
@@ -138,7 +138,7 @@ class StartState extends State<StudentLoginScreen> {
             height: 54,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: [(new Color(0xff30AAB0)), new Color(0xff4FC8CF)],
+                  colors: [(new Color(0xFFF2C202)), new Color(0xFFFDD738)],
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight),
               borderRadius: BorderRadius.circular(50),
@@ -156,28 +156,6 @@ class StartState extends State<StudentLoginScreen> {
             ),
           ),
         ),
-        Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Don't Have Any Account?  "),
-              GestureDetector(
-                child: Text(
-                  "Register Now",
-                  style: TextStyle(color: MyThemes.blueColor),
-                ),
-                onTap: () {
-                  // Write Tap Code Here.
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => RegistrationScreen(),
-                      ));
-                },
-              )
-            ],
-          ),
-        )
       ],
     )));
   }

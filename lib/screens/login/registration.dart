@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:tnp/screens/home/home.dart';
+import 'package:tnp/screens/login/login.dart';
 import 'package:tnp/screens/login/widgets/branch_Data.dart';
 import 'package:tnp/screens/login/widgets/notifiers.dart';
 import 'package:tnp/widgets/themes.dart';
@@ -252,8 +254,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   cursorColor: MyThemes.blueColor,
                   decoration: InputDecoration(
                     focusColor: MyThemes.blueColor,
-                    icon: Icon(
-                      Icons.scatter_plot_outlined,
+                    icon: FaIcon(
+                      FontAwesomeIcons.codeBranch,
                       color: MyThemes.blueColor,
                     ),
                     hintText: "Select Branch",
@@ -310,8 +312,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       style: TextStyle(color: MyThemes.blueColor),
                     ),
                     onTap: () {
-                      // Write Tap Code Here.
-                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => StudentLoginScreen()),
+                      );
                     },
                   )
                 ],

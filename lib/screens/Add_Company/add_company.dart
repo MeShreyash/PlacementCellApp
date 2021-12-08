@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tnp/widgets/themes.dart';
 
 class AddCompany extends StatelessWidget {
@@ -15,7 +16,6 @@ class AddCompany extends StatelessWidget {
         titleSpacing: 00.0,
         centerTitle: true,
         toolbarHeight: 60.2,
-        // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(360)),
         elevation: 0.00,
         backgroundColor: MyThemes.orangeColor,
       ),
@@ -29,13 +29,13 @@ class AddCompany extends StatelessWidget {
               child: TextField(
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
-                  icon: Icon(
-                    Icons.person,
+                  icon: FaIcon(
+                    FontAwesomeIcons.building,
                     color: MyThemes.orangeColor,
                   ),
                   hintText: "Company Name",
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
+                  // enabledBorder: InputBorder.none,
+                  //  focusedBorder: InputBorder.none,
                 ),
               ),
             ),
@@ -46,13 +46,13 @@ class AddCompany extends StatelessWidget {
               child: TextField(
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
-                  icon: Icon(
-                    Icons.person,
+                  icon: FaIcon(
+                    FontAwesomeIcons.idCard,
                     color: MyThemes.orangeColor,
                   ),
                   hintText: "Job Profile",
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
+                  // enabledBorder: InputBorder.none,
+                  // focusedBorder: InputBorder.none,
                 ),
               ),
             ),
@@ -63,13 +63,13 @@ class AddCompany extends StatelessWidget {
               child: TextField(
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
-                  icon: Icon(
-                    Icons.person,
+                  icon: FaIcon(
+                    FontAwesomeIcons.codeBranch,
                     color: MyThemes.orangeColor,
                   ),
                   hintText: "Branches",
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
+                  // enabledBorder: InputBorder.none,
+                  // focusedBorder: InputBorder.none,
                 ),
               ),
             ),
@@ -80,13 +80,13 @@ class AddCompany extends StatelessWidget {
               child: TextField(
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
-                  icon: Icon(
-                    Icons.person,
+                  icon: FaIcon(
+                    FontAwesomeIcons.poll,
                     color: MyThemes.orangeColor,
                   ),
                   hintText: "CG Cut",
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
+                  // enabledBorder: InputBorder.none,
+                  // focusedBorder: InputBorder.none,
                 ),
               ),
             ),
@@ -97,13 +97,13 @@ class AddCompany extends StatelessWidget {
               child: TextField(
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
-                  icon: Icon(
-                    Icons.person,
+                  icon: FaIcon(
+                    FontAwesomeIcons.rupeeSign,
                     color: MyThemes.orangeColor,
                   ),
                   hintText: "Salary",
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
+                  // enabledBorder: InputBorder.none,
+                  // focusedBorder: InputBorder.none,
                 ),
               ),
             ),
@@ -114,13 +114,13 @@ class AddCompany extends StatelessWidget {
               child: TextField(
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
-                  icon: Icon(
-                    Icons.person,
+                  icon: FaIcon(
+                    FontAwesomeIcons.clock,
                     color: MyThemes.orangeColor,
                   ),
                   hintText: "Job Duration(Intern, FT)",
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
+                  // enabledBorder: InputBorder.none,
+                  // focusedBorder: InputBorder.none,
                 ),
               ),
             ),
@@ -131,13 +131,13 @@ class AddCompany extends StatelessWidget {
               child: TextField(
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
-                  icon: Icon(
-                    Icons.person,
+                  icon: FaIcon(
+                    FontAwesomeIcons.link,
                     color: MyThemes.orangeColor,
                   ),
                   hintText: "Form Link",
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
+                  // enabledBorder: InputBorder.none,
+                  // focusedBorder: InputBorder.none,
                 ),
               ),
             ),
@@ -148,13 +148,13 @@ class AddCompany extends StatelessWidget {
               child: TextField(
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
-                  icon: Icon(
-                    Icons.calendar_today,
+                  icon: FaIcon(
+                    FontAwesomeIcons.hourglassHalf,
                     color: MyThemes.orangeColor,
                   ),
                   hintText: "Form Closing Date",
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
+                  // enabledBorder: InputBorder.none,
+                  // focusedBorder: InputBorder.none,
                 ),
               ),
             ),
@@ -165,13 +165,13 @@ class AddCompany extends StatelessWidget {
               child: TextField(
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
-                  icon: Icon(
-                    Icons.person,
+                  icon: FaIcon(
+                    FontAwesomeIcons.clipboard,
                     color: MyThemes.orangeColor,
                   ),
                   hintText: "Description",
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
+                  // enabledBorder: InputBorder.none,
+                  // focusedBorder: InputBorder.none,
                 ),
               ),
             ),

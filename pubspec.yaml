@@ -37,6 +37,10 @@ dependencies:
   velocity_x: ^3.3.0
   hexcolor: ^2.0.5
   provider: ^6.0.1
+  font_awesome_flutter: ^9.2.0
+  carousel_slider: ^4.0.0
+  flutter_image_slider: ^0.0.1
+  
 
 dev_dependencies:
   flutter_test:

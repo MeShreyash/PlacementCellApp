@@ -135,7 +135,7 @@ class FourButton extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => PastData_Page()),
+                            builder: (context) => pastData_Page()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
