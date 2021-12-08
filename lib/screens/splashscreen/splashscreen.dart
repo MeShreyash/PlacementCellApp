@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:tnp/screens/login/login.dart';
+import 'package:tnp/screens/login/user_admin.dart';
 import 'package:tnp/widgets/themes.dart';
 
 void main() {
@@ -30,7 +31,7 @@ class StartState extends State<SplashScreen> {
 
   route() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => LoginScreen()));
+        context, MaterialPageRoute(builder: (context) => UserAdmin_Page()));
   }
 
   @override

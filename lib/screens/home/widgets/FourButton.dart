@@ -43,7 +43,8 @@ class FourButton extends StatelessWidget {
                             SizedBox(
                                 height: 50,
                                 width: 50,
-                                child: Image.asset('assets/images/logo.png')),
+                                child:
+                                    Image.asset('assets/images/company.png')),
                           ],
                         ),
                         Row(
@@ -95,7 +96,7 @@ class FourButton extends StatelessWidget {
                             SizedBox(
                                 height: 50,
                                 width: 50,
-                                child: Image.asset('assets/images/logo.png')),
+                                child: Image.asset('assets/images/resume.png')),
                           ],
                         ),
                         Row(
@@ -133,7 +134,8 @@ class FourButton extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => PastData_Page()),
+                        MaterialPageRoute(
+                            builder: (context) => PastData_Page()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
@@ -152,7 +154,7 @@ class FourButton extends StatelessWidget {
                             SizedBox(
                                 height: 50,
                                 width: 50,
-                                child: Image.asset('assets/images/logo.png')),
+                                child: Image.asset('assets/images/data.png')),
                           ],
                         ),
                         Row(
@@ -204,7 +206,7 @@ class FourButton extends StatelessWidget {
                             SizedBox(
                                 height: 50,
                                 width: 50,
-                                child: Image.asset('assets/images/logo.png')),
+                                child: Image.asset('assets/images/faq.png')),
                           ],
                         ),
                         Row(

@@ -53,6 +53,8 @@ class JobItem extends StatelessWidget {
                     ),
                     decoration: InputDecoration(
                       hintText: job.company,
+                      enabledBorder: InputBorder.none,
+                      focusedBorder: InputBorder.none,
                     )),
               ),
               Align(

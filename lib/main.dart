@@ -1,14 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:tnp/screens/Add_Company/add_company.dart';
+import 'package:tnp/screens/CompanyDetail/jobDetail_Page.dart';
+import 'package:tnp/screens/CompanyDetail/job_detail.dart';
 import 'package:tnp/screens/drawer/drawer.dart';
 import 'package:tnp/screens/home/home.dart';
 import 'package:tnp/screens/login/login.dart';
 import 'package:tnp/screens/login/registration.dart';
+import 'package:tnp/screens/login/user_admin.dart';
+import 'package:tnp/screens/login/widgets/notifiers.dart';
 import 'package:tnp/screens/search/search_page.dart';
 import 'package:tnp/screens/splashscreen/splashscreen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider<SingleNotifier>(
+        create: (_) => SingleNotifier(),
+      ),
+    ],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -26,7 +39,7 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xFFFED408),
       ),
 
-      home: HomePage(),
+      home: AddCompany(),
       //home: SplashScreen(),
     );
   }

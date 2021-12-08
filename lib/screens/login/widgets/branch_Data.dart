@@ -1,0 +1,16 @@
+final List<String> branches = [
+  'CSE - Computer Science & Engg.',
+  'COE - Computer Engg.',
+  'COBS - Computer Science & Business Systems',
+  'ENC - Electronics & Computer Engg.',
+  'ECE - Electronics & Communication Engg.',
+  'EEC - Electrical & Computer Engg.',
+  'EIC - Electronics (Instrumentation & Control) Engg.',
+  'ELE - Electrical Engg.',
+  'MEE - Mechanical Engg',
+  'CHE - Chemical Engg.',
+  'CIE - Civil Engg.',
+  'MEC - Mechatronics',
+  'BT - Biotechnology',
+  'BME - Biomedical Engg',
+];
