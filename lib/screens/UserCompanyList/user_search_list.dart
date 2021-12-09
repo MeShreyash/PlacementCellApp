@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tnp/modals/job.dart';
 import 'package:tnp/screens/Company_List/job_card.dart';
 
-class SearchList extends StatelessWidget {
+class UserSearchList extends StatelessWidget {
   // final JobList = null;
 
   @override

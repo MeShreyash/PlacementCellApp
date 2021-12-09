@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tnp/screens/FAQ/faq.dart';
 import 'package:tnp/screens/PastData/PastData.dart';
 import 'package:tnp/screens/Resumes/resume.dart';
+import 'package:tnp/screens/UserCompanyList/user_search_page.dart';
 import 'package:tnp/screens/search/search_page.dart';
 import 'package:tnp/widgets/themes.dart';
 
@@ -24,7 +25,8 @@ class FourButton extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SearchPage()),
+                        MaterialPageRoute(
+                            builder: (context) => UserSearchPage()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
@@ -105,7 +107,7 @@ class FourButton extends StatelessWidget {
                               alignment: Alignment.bottomLeft,
                               //  heightFactor: 1.7,
                               child: Text(
-                                '\n \nResumes',
+                                '\n \nResources',
                                 style: TextStyle(
                                   fontSize: 19.0,
                                   color: Colors.white,

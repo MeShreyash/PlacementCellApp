@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:tnp/screens/UserCompanyList/user_search_app_bar.dart';
+import 'package:tnp/screens/UserCompanyList/user_search_list.dart';
 import 'package:tnp/screens/search/widgets/search_app_bar.dart';
 import 'package:tnp/screens/search/widgets/search_input.dart';
 import 'package:tnp/screens/search/widgets/search_list.dart';
 import 'package:tnp/screens/search/widgets/search_option.dart';
 
-class SearchPage extends StatelessWidget {
+class UserSearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,10 +25,10 @@ class SearchPage extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SearchAppBar(),
+                UserSearchAppBar(),
                 //    SearchInput(),
                 //SearchOption(),
-                Expanded(child: SearchList()),
+                Expanded(child: UserSearchList()),
               ],
             )
           ],

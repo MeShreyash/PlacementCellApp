@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:tnp/modals/job.dart';
 import 'package:tnp/screens/CompanyDetail/job_detail.dart';
-import 'package:tnp/screens/Company_List/job_item.dart';
-import 'job_detail.dart';
-import 'job_item.dart';
+import 'package:tnp/screens/Company_List/job_card.dart';
+import 'job_card.dart';
 
 class JobList extends StatelessWidget {
-  final jobList = Job.generateJobs();
+  final jobList = null;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class JobList extends StatelessWidget {
                       context: context,
                       builder: (context) => JobDetail(jobList[index]));
                 },
-                child: JobItem(jobList[index])),
+                child: JobCard(jobList[index])),
             separatorBuilder: (_, index) => SizedBox(
                   width: 15,
                 ),

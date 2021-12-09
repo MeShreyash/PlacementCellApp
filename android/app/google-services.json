@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "678501938781",
+    "project_id": "placement-app-d840f",
+    "storage_bucket": "placement-app-d840f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678501938781:android:1c91caed41e92103aeffb4",
+        "android_client_info": {
+          "package_name": "com.example.tnp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678501938781-ennrdnl7k97ep9bunjce5di9gr8au4kc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHdQ8L-7uEQah2ZVii2XlsXJBaUHJEPek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678501938781-ennrdnl7k97ep9bunjce5di9gr8au4kc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

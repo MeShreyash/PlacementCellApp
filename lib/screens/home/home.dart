@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tnp/screens/Bookmark/bookmark.dart';
 import 'package:tnp/screens/Profile/profile.dart';
 import 'package:tnp/screens/Resumes/resume.dart';
+import 'package:tnp/screens/UserCompanyList/user_search_page.dart';
 import 'package:tnp/screens/home/widgets/FourButton.dart';
 import 'package:tnp/screens/home/widgets/UpdateCard.dart';
 import 'package:tnp/screens/home/widgets/home_app_bar.dart';
@@ -58,7 +59,7 @@ class HomePage extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => SearchPage()),
+              MaterialPageRoute(builder: (context) => UserSearchPage()),
             );
           },
           child: Image.asset(
@@ -93,7 +94,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               BottomNavigationBarItem(
-                label: 'Resume',
+                label: 'Resources',
                 icon: GestureDetector(
                   onTap: () {
                     Navigator.push(

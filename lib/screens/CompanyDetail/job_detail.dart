@@ -40,31 +40,30 @@ class JobDetail extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.grey.withOpacity(0.3),
                   ),
-//                      child: Image.asset(Job logoUrl),
                 ),
                 SizedBox(width: 10),
                 Text(
-                  job.company,
+                  job.companyName,
                   style: TextStyle(
                     fontSize: 16,
                   ),
                 ),
               ],
             ),
-            Row(
-              children: [
-                Icon(
-                  job.isMark ? Icons.bookmark : Icons.book_online_outlined,
-                  color: job.isMark
-                      ? Theme.of(context).primaryColor
-                      : Colors.black,
-                ),
-                Icon(Icons.more_horiz_outlined),
-              ],
-            ),
+            // Row(
+            //   children: [
+            //     Icon(
+            //       job.isMark ? Icons.bookmark : Icons.book_online_outlined,
+            //       color: job.isMark
+            //           ? Theme.of(context).primaryColor
+            //           : Colors.black,
+            //     ),
+            //     Icon(Icons.more_horiz_outlined),
+            //   ],
+            // ),
             SizedBox(height: 20),
             Text(
-              job.title,
+              job.jobProfile,
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
@@ -75,9 +74,13 @@ class JobDetail extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 IconText(Icons.attach_money_sharp, job.salary),
-                IconText(Icons.access_time_outlined, job.time),
+                IconText(Icons.access_time_outlined, job.jobType),
                 IconText(Icons.calendar_today_rounded, job.deadline),
               ],
+            ),
+            SizedBox(height: 30),
+            Container(
+              child: Text(job.link),
             ),
             SizedBox(height: 30),
             Text(
@@ -87,36 +90,9 @@ class JobDetail extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            ...job.req
-                .map((e) => Container(
-                      margin: EdgeInsets.symmetric(vertical: 5),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 10),
-                            height: 5,
-                            width: 5,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle, color: Colors.black),
-                          ),
-                          SizedBox(width: 10),
-                          ConstrainedBox(
-                            constraints: BoxConstraints(
-                              maxWidth: 300,
-                            ),
-                            child: Text(
-                              e,
-                              style: TextStyle(
-                                wordSpacing: 2.5,
-                                height: 1.5,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ))
-                .toList(),
+            Container(
+              child: Text(job.description),
+            ),
             Container(
                 margin: EdgeInsets.symmetric(vertical: 25),
                 height: 45,

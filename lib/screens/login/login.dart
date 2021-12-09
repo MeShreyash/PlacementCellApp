@@ -1,5 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:tnp/screens/home/home.dart';
+import 'package:tnp/screens/login/adminLogin.dart';
 import 'package:tnp/screens/login/registration.dart';
+import 'package:tnp/screens/search/search_page.dart';
 import 'package:tnp/widgets/themes.dart';
 
 class StudentLoginScreen extends StatefulWidget {
@@ -10,6 +14,9 @@ class StudentLoginScreen extends StatefulWidget {
 }
 
 class StartState extends State<StudentLoginScreen> {
+  String email = "";
+  String password = "";
+
   @override
   Widget build(BuildContext context) {
     return initWidget();
@@ -73,6 +80,9 @@ class StartState extends State<StudentLoginScreen> {
             ],
           ),
           child: TextField(
+            onChanged: (value) {
+              email = value;
+            },
             cursorColor: MyThemes.yellowColor,
             decoration: InputDecoration(
               icon: Icon(
@@ -101,6 +111,9 @@ class StartState extends State<StudentLoginScreen> {
             ],
           ),
           child: TextField(
+            onChanged: (value) {
+              password = value;
+            },
             cursorColor: MyThemes.yellowColor,
             decoration: InputDecoration(
               focusColor: MyThemes.yellowColor,
@@ -128,8 +141,26 @@ class StartState extends State<StudentLoginScreen> {
           ),
         ),
         GestureDetector(
-          onTap: () {
-            // Write Click Listener Code Here.
+          onTap: () async {
+            DocumentSnapshot temp = await FirebaseFirestore.instance
+                .collection('user')
+                .doc(email)
+                .get();
+            if (temp != null) {
+              user.name = temp.get('name');
+              user.email = temp.get('email');
+              user.phone = temp.get('phone');
+              user.branch = temp.get('branch');
+              user.rollno = temp.get('rollno');
+              user.year = temp.get('year');
+
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            }
+
+            return;
           },
           child: Container(
             alignment: Alignment.center,

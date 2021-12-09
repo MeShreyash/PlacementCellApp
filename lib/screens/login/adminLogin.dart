@@ -1,6 +1,13 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:tnp/screens/home/home.dart';
 import 'package:tnp/screens/login/registration.dart';
+import 'package:tnp/screens/login/widgets/user.dart';
+import 'package:tnp/screens/search/search_page.dart';
 import 'package:tnp/widgets/themes.dart';
+
+User user =
+    User('aditya', '898989', 'email', 'password', 'rollno', 'year', 'branch');
 
 class AdminLoginScreen extends StatefulWidget {
   const AdminLoginScreen({Key? key}) : super(key: key);
@@ -10,6 +17,9 @@ class AdminLoginScreen extends StatefulWidget {
 }
 
 class StartState extends State<AdminLoginScreen> {
+  String email = "";
+  String password = "";
+
   @override
   Widget build(BuildContext context) {
     return initWidget();
@@ -73,6 +83,9 @@ class StartState extends State<AdminLoginScreen> {
             ],
           ),
           child: TextField(
+            onChanged: (value) {
+              email = value;
+            },
             cursorColor: MyThemes.yellowColor,
             decoration: InputDecoration(
               icon: Icon(
@@ -101,6 +114,9 @@ class StartState extends State<AdminLoginScreen> {
             ],
           ),
           child: TextField(
+            onChanged: (value) {
+              password = value;
+            },
             cursorColor: MyThemes.yellowColor,
             decoration: InputDecoration(
               focusColor: MyThemes.yellowColor,
@@ -128,8 +144,29 @@ class StartState extends State<AdminLoginScreen> {
           ),
         ),
         GestureDetector(
-          onTap: () {
-            // Write Click Listener Code Here.
+          onTap: () async {
+            DocumentSnapshot temp = await FirebaseFirestore.instance
+                .collection('user')
+                .doc(email)
+                .get();
+            if (temp != null) {
+              user.name = temp.get('name');
+              user.email = temp.get('email');
+              user.phone = temp.get('phone');
+              user.branch = temp.get('branch');
+              user.rollno = temp.get('rollno');
+              user.year = temp.get('year');
+
+              if (temp.get('isAdmin')) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SearchPage()),
+                );
+              }
+            }
+
+            return;
+
           },
           child: Container(
             alignment: Alignment.center,

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -5,16 +6,26 @@ import 'package:tnp/screens/home/home.dart';
 import 'package:tnp/screens/login/login.dart';
 import 'package:tnp/screens/login/widgets/branch_Data.dart';
 import 'package:tnp/screens/login/widgets/notifiers.dart';
+import 'package:tnp/screens/login/widgets/user.dart';
 import 'package:tnp/widgets/themes.dart';
 
 class RegistrationScreen extends StatefulWidget {
-  const RegistrationScreen({Key? key}) : super(key: key);
+  RegistrationScreen({Key? key}) : super(key: key);
+
+  late final User user;
 
   @override
   _RegistrationScreenState createState() => _RegistrationScreenState();
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
+  String name = "";
+  String phone = "";
+  String email = "";
+  String password = "";
+  String rollno = "";
+  String year = "";
+  String branch = "";
   @override
   Widget build(BuildContext context) => initWidget();
 
@@ -77,6 +88,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ],
               ),
               child: TextField(
+                onChanged: (value) {
+                  name = value;
+                },
                 cursorColor: MyThemes.blueColor,
                 decoration: InputDecoration(
                   icon: Icon(
@@ -105,6 +119,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ],
               ),
               child: TextField(
+                onChanged: (value) {
+                  phone = value;
+                },
                 cursorColor: MyThemes.blueColor,
                 decoration: InputDecoration(
                   focusColor: MyThemes.blueColor,
@@ -134,6 +151,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ],
               ),
               child: TextField(
+                onChanged: (value) {
+                  email = value;
+                },
                 cursorColor: MyThemes.blueColor,
                 decoration: InputDecoration(
                   icon: Icon(
@@ -162,6 +182,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ],
               ),
               child: TextField(
+                onChanged: (value) {
+                  password = value;
+                },
                 cursorColor: MyThemes.blueColor,
                 decoration: InputDecoration(
                   focusColor: MyThemes.blueColor,
@@ -191,6 +214,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ],
               ),
               child: TextField(
+                onChanged: (value) {
+                  rollno = value;
+                },
                 cursorColor: MyThemes.blueColor,
                 decoration: InputDecoration(
                   focusColor: MyThemes.blueColor,
@@ -220,6 +246,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ],
               ),
               child: TextField(
+                onChanged: (value) {
+                  year = value;
+                },
                 cursorColor: MyThemes.blueColor,
                 decoration: InputDecoration(
                   focusColor: MyThemes.blueColor,
@@ -251,6 +280,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ],
                 ),
                 child: TextField(
+                  onChanged: (value) {
+                    branch = value;
+                  },
                   cursorColor: MyThemes.blueColor,
                   decoration: InputDecoration(
                     focusColor: MyThemes.blueColor,
@@ -268,12 +300,36 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
             //BUTTON
             GestureDetector(
+              // onTap: () {
+              //   FirebaseFirestore.instance.collection('user').add({
+              //     'name': name,
+              //     'phone': phone,
+              //     'email': email,
+              //     'password': password,
+              //     'rollno': rollno,
+              //     'year': year,
+              //     'branch': branch,
+              //   }).then((value) => Navigator.push(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => StudentLoginScreen()),
+              //   ),
+
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
-                // Write Click Listener Code Here.
+                FirebaseFirestore.instance.collection('user').doc(email).set({
+                  'name': name,
+                  'phone': phone,
+                  'email': email,
+                  'password': password,
+                  'rollno': rollno,
+                  'year': year,
+                  'branch': branch,
+                  'isAdmin': false,
+                }).then((value) {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => StudentLoginScreen()));
+                });
               },
               child: Container(
                 alignment: Alignment.center,
@@ -321,7 +377,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   )
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -1,10 +1,18 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tnp/widgets/themes.dart';
 
 class AddCompany extends StatelessWidget {
-  const AddCompany({Key? key}) : super(key: key);
+  AddCompany({Key? key}) : super(key: key);
+  String companyName = "";
+  String jobProfile = "";
+  String salary = "";
+  String jobType = "";
+  String deadline = "";
+  String link = "";
+  String description = "";
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +35,9 @@ class AddCompany extends StatelessWidget {
               margin: EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: EdgeInsets.only(left: 20, right: 20),
               child: TextField(
+                onChanged: (value) {
+                  companyName = value;
+                },
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
                   icon: FaIcon(
@@ -44,6 +55,9 @@ class AddCompany extends StatelessWidget {
               margin: EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: EdgeInsets.only(left: 20, right: 20),
               child: TextField(
+                onChanged: (value) {
+                  jobProfile = value;
+                },
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
                   icon: FaIcon(
@@ -56,45 +70,59 @@ class AddCompany extends StatelessWidget {
                 ),
               ),
             ),
+
+            //
+            // Container(
+            //   alignment: Alignment.center,
+            //   margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+            //   padding: EdgeInsets.only(left: 20, right: 20),
+            //   child: TextField(
+            //     onChanged: (value) {
+            //       companyName = value;
+            //     },
+            //     cursorColor: MyThemes.orangeColor,
+            //     decoration: InputDecoration(
+            //       icon: FaIcon(
+            //         FontAwesomeIcons.codeBranch,
+            //         color: MyThemes.orangeColor,
+            //       ),
+            //       hintText: "Branches",
+            //       // enabledBorder: InputBorder.none,
+            //       // focusedBorder: InputBorder.none,
+            //     ),
+            //   ),
+            // ),
+            // Container(
+            //   alignment: Alignment.center,
+            //   margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+            //   padding: EdgeInsets.only(left: 20, right: 20),
+            //   child: TextField(
+            //     onChanged: (value) {
+            //       companyName = value;
+            //     },
+            //     cursorColor: MyThemes.orangeColor,
+            //     decoration: InputDecoration(
+            //       icon: FaIcon(
+            //         FontAwesomeIcons.poll,
+            //         color: MyThemes.orangeColor,
+            //       ),
+            //       hintText: "CG Cut",
+            //       // enabledBorder: InputBorder.none,
+            //       // focusedBorder: InputBorder.none,
+            //     ),
+            //   ),
+            // ),
+
+            //
+
             Container(
               alignment: Alignment.center,
               margin: EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: EdgeInsets.only(left: 20, right: 20),
               child: TextField(
-                cursorColor: MyThemes.orangeColor,
-                decoration: InputDecoration(
-                  icon: FaIcon(
-                    FontAwesomeIcons.codeBranch,
-                    color: MyThemes.orangeColor,
-                  ),
-                  hintText: "Branches",
-                  // enabledBorder: InputBorder.none,
-                  // focusedBorder: InputBorder.none,
-                ),
-              ),
-            ),
-            Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: TextField(
-                cursorColor: MyThemes.orangeColor,
-                decoration: InputDecoration(
-                  icon: FaIcon(
-                    FontAwesomeIcons.poll,
-                    color: MyThemes.orangeColor,
-                  ),
-                  hintText: "CG Cut",
-                  // enabledBorder: InputBorder.none,
-                  // focusedBorder: InputBorder.none,
-                ),
-              ),
-            ),
-            Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: TextField(
+                onChanged: (value) {
+                  salary = value;
+                },
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
                   icon: FaIcon(
@@ -112,6 +140,9 @@ class AddCompany extends StatelessWidget {
               margin: EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: EdgeInsets.only(left: 20, right: 20),
               child: TextField(
+                onChanged: (value) {
+                  jobType = value;
+                },
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
                   icon: FaIcon(
@@ -129,6 +160,9 @@ class AddCompany extends StatelessWidget {
               margin: EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: EdgeInsets.only(left: 20, right: 20),
               child: TextField(
+                onChanged: (value) {
+                  link = value;
+                },
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
                   icon: FaIcon(
@@ -146,6 +180,9 @@ class AddCompany extends StatelessWidget {
               margin: EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: EdgeInsets.only(left: 20, right: 20),
               child: TextField(
+                onChanged: (value) {
+                  deadline = value;
+                },
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
                   icon: FaIcon(
@@ -163,6 +200,9 @@ class AddCompany extends StatelessWidget {
               margin: EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: EdgeInsets.only(left: 20, right: 20),
               child: TextField(
+                onChanged: (value) {
+                  description = value;
+                },
                 cursorColor: MyThemes.orangeColor,
                 decoration: InputDecoration(
                   icon: FaIcon(
@@ -179,6 +219,15 @@ class AddCompany extends StatelessWidget {
             //CREATE BUTTON
             GestureDetector(
               onTap: () {
+                FirebaseFirestore.instance.collection('jobs').add({
+                  'companyName': companyName,
+                  'jobProfile': jobProfile,
+                  'salary': salary,
+                  'jobType': jobType,
+                  'formLastDate': deadline,
+                  'link': link,
+                  'description': description,
+                }).then((value) => Navigator.pop(context));
                 // Write Click Listener Code Here.
               },
               child: Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tnp/screens/Profile/profile.dart';
 import 'package:tnp/screens/drawer/drawer.dart';
 import 'package:tnp/widgets/themes.dart';
 
@@ -8,6 +9,7 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
       padding: EdgeInsets.only(
         top: MediaQuery.of(context).padding.top,
         left: 18,
@@ -16,17 +18,17 @@ class HomeAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Row(children: [
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => MyDrawer()),
-            );
-              },
-              icon: new Icon(Icons.menu_rounded, size: 30),
-            ),
-          ]),
+          // Row(children: [
+          //   IconButton(
+          //     onPressed: () {
+          //       Navigator.push(
+          //     context,
+          //     MaterialPageRoute(builder: (context) => MyDrawer()),
+          //   );
+          //     },
+          //     icon: new Icon(Icons.menu_rounded, size: 30),
+          //   ),
+          // ]),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -45,13 +47,13 @@ class HomeAppBar extends StatelessWidget {
             ],
           ),
           SizedBox(
-            width: 43,
+            width: 55,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 30, right: 15),
+                margin: EdgeInsets.only(top: 30, right: 10),
                 transform: Matrix4.rotationZ(100),
                 child: Stack(
                   children: [
@@ -79,11 +81,16 @@ class HomeAppBar extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ProfilePage()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       elevation: 0,
                       shape: CircleBorder(),
-                      padding: EdgeInsets.all(7),
+                      padding: EdgeInsets.all(5),
                       primary: MyThemes.blueColor, // <-- Button color
                       onPrimary: Colors.red, // <-- Splash color
                     ),
