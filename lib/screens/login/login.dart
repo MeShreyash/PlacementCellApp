@@ -141,26 +141,32 @@ class StartState extends State<StudentLoginScreen> {
           ),
         ),
         GestureDetector(
-          onTap: () async {
-            DocumentSnapshot temp = await FirebaseFirestore.instance
-                .collection('user')
-                .doc(email)
-                .get();
-            if (temp != null) {
-              user.name = temp.get('name');
-              user.email = temp.get('email');
-              user.phone = temp.get('phone');
-              user.branch = temp.get('branch');
-              user.rollno = temp.get('rollno');
-              user.year = temp.get('year');
+          // onTap: () async {
+          //   DocumentSnapshot temp = await FirebaseFirestore.instance
+          //       .collection('user')
+          //       .doc(email)
+          //       .get();
+          //   if (temp != null) {
+          //     user.name = temp.get('name');
+          //     user.email = temp.get('email');
+          //     user.phone = temp.get('phone');
+          //     user.branch = temp.get('branch');
+          //     user.rollno = temp.get('rollno');
+          //     user.year = temp.get('year');
 
-              Navigator.push(
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => HomePage()),
+          //     );
+          //   }
+
+          //   return;
+          // },
+          onTap: (){
+            Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => HomePage()),
               );
-            }
-
-            return;
           },
           child: Container(
             alignment: Alignment.center,

@@ -14,7 +14,7 @@ class UpdateCard extends StatelessWidget {
             children: [
               SizedBox(width: 10),
               Text(
-                'Updates',
+                'Recent Jobs',
                 style: TextStyle(
                     color: MyThemes.blackColor,
                     fontSize: 20,
@@ -23,33 +23,143 @@ class UpdateCard extends StatelessWidget {
             ],
           ),
 
+          // Center(
+          //   child: SizedBox(
+          //     width: 300,
+          //     height: 170,
+          //     child: PageView.builder(
+          //       itemCount: 6,
+          //       controller: PageController(viewportFraction: 0.85),
+          //       onPageChanged: (int index) => setState(() => _index = index),
+          //       itemBuilder: (_, i) {
+          //         return Transform.scale(
+          //           scale: i == _index ? 0.9 : 0.9,
+          //           child: Card(
+          //             elevation: 6,
+          //             shape: RoundedRectangleBorder(
+          //               borderRadius: BorderRadius.circular(20),
+          //             ),
+          //             //  child: Center(),
+
+          //             child: Center(
+          //               // child: Container(
+          //               //   alignment: Alignment.center,
+          //               //   margin: EdgeInsets.only(
+          //               //     left: 20,
+          //               //     right: 20,
+          //               //   ),
+          //               //   padding:
+          //               //       EdgeInsets.only(left: 20, right: 20, top: 10),
+          //               //   child: Image.asset(
+          //               //     "assets/images/zomato.jpg",
+          //               //   ),
+          //               // ),
+          //               children:
+          //                 [Container(
+          //                   alignment: Alignment.center,
+          //                   margin: EdgeInsets.only(
+          //                     left: 20,
+          //                     right: 20,
+          //                   ),
+          //                   padding:
+          //                       EdgeInsets.only(left: 20, right: 20, top: 10),
+          //                   child: Image.asset(
+          //                     "assets/images/ibm.jpg",
+          //                   ),
+          //                 ),
+          //                 Container(
+          //                 alignment: Alignment.center,
+          //                 margin: EdgeInsets.only(
+          //                   left: 20,
+          //                   right: 20,
+          //                 ),
+          //                 padding:
+          //                     EdgeInsets.only(left: 20, right: 20, top: 10),
+          //                 child: Image.asset(
+          //                   "assets/images/sew.jpg",
+          //                 ),
+          //               ),
+          //               Container(
+          //                 alignment: Alignment.center,
+          //                 margin: EdgeInsets.only(
+          //                   left: 20,
+          //                   right: 20,
+          //                 ),
+          //                 padding:
+          //                     EdgeInsets.only(left: 20, right: 20, top: 10),
+          //                 child: Image.asset(
+          //                   "assets/images/infosys.jpg",
+          //                 ),
+          //               ),
+          //               ],
+          //             ),
+          //           ),
+          //         );
+          //       },
+          //     ),
+          //   ),
+          // ),
+
           Center(
             child: SizedBox(
               width: 300,
               height: 170,
-              child: PageView.builder(
-                itemCount: 8,
-                controller: PageController(viewportFraction: 0.85),
-                onPageChanged: (int index) => setState(() => _index = index),
-                itemBuilder: (_, i) {
-                  return Transform.scale(
-                    scale: i == _index ? 1 : 0.9,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(top: 5, bottom: 5),
+                    padding: EdgeInsets.symmetric(vertical: 2),
                     child: Card(
                       elevation: 6,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: Center(),
-
-                      // child: Center(
-                      //   child: Text(
-                      //     "Card ${i + 1}",
-                      //     style: TextStyle(fontSize: 32),
-                      //   ),
-                      // ),
+                      child: Image.asset(
+                        "assets/images/zomato.jpg",
+                      ),
                     ),
-                  );
-                },
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 5, bottom: 5),
+                    padding: EdgeInsets.symmetric(vertical: 2),
+                    child: Card(
+                      elevation: 6,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Image.asset(
+                        "assets/images/ibm.jpg",
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 5, bottom: 5),
+                    padding: EdgeInsets.symmetric(vertical: 2),
+                    child: Card(
+                      elevation: 6,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Image.asset(
+                        "assets/images/infosys.jpg",
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 5, bottom: 5),
+                    padding: EdgeInsets.symmetric(vertical: 2),
+                    child: Card(
+                      elevation: 6,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Image.asset(
+                        "assets/images/sew.jpg",
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

@@ -30,12 +30,189 @@ class ProfilePage extends StatelessWidget {
           children: [
             Column(
               children: [
-                Text(user.name),
-                Text(user.phone),
-                Text('Email id -'),
-                Text('Roll No. -'),
-                Text('Year -'),
-                Text('Branch -'),
+                //Name
+                Container(
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  height: 54,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.grey[200],
+                    boxShadow: [
+                      BoxShadow(
+                          offset: Offset(0, 10),
+                          blurRadius: 50,
+                          color: Color(0xffEEEEEE)),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.person,
+                        color: MyThemes.blueColor,
+                      ),
+                      SizedBox(width: 7),
+                      Text(
+                        user.name,
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                ),
+                //Phone No.
+                Container(
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  height: 54,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.grey[200],
+                    boxShadow: [
+                      BoxShadow(
+                          offset: Offset(0, 10),
+                          blurRadius: 50,
+                          color: Color(0xffEEEEEE)),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        color: MyThemes.blueColor,
+                      ),
+                      SizedBox(width: 7),
+                      Text(
+                        user.phone,
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                ),
+
+                //EMAIL
+                Container(
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  height: 54,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.grey[200],
+                    boxShadow: [
+                      BoxShadow(
+                          offset: Offset(0, 10),
+                          blurRadius: 50,
+                          color: Color(0xffEEEEEE)),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.email,
+                        color: MyThemes.blueColor,
+                      ),
+                      SizedBox(width: 7),
+                      Text(
+                        user.email,
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                ),
+
+                //Roll No.
+                Container(
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  height: 54,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.grey[200],
+                    boxShadow: [
+                      BoxShadow(
+                          offset: Offset(0, 10),
+                          blurRadius: 50,
+                          color: Color(0xffEEEEEE)),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.format_list_numbered_outlined,
+                        color: MyThemes.blueColor,
+                      ),
+                      SizedBox(width: 7),
+                      Text(
+                        user.rollno,
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                ),
+
+                //Year
+                Container(
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  height: 54,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.grey[200],
+                    boxShadow: [
+                      BoxShadow(
+                          offset: Offset(0, 10),
+                          blurRadius: 50,
+                          color: Color(0xffEEEEEE)),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.date_range,
+                        color: MyThemes.blueColor,
+                      ),
+                      SizedBox(width: 7),
+                      Text(
+                        user.year,
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                ),
+                //Branch
+                Container(
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  height: 54,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.grey[200],
+                    boxShadow: [
+                      BoxShadow(
+                          offset: Offset(0, 10),
+                          blurRadius: 50,
+                          color: Color(0xffEEEEEE)),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      FaIcon(
+                        FontAwesomeIcons.codeBranch,
+                        color: MyThemes.blueColor,
+                      ),
+                      SizedBox(width: 7),
+                      Text(
+                        user.branch,
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ],

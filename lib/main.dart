@@ -5,8 +5,11 @@ import 'package:provider/provider.dart';
 import 'package:tnp/screens/Add_Company/add_company.dart';
 import 'package:tnp/screens/CompanyDetail/jobDetail_Page.dart';
 import 'package:tnp/screens/CompanyDetail/job_detail.dart';
+import 'package:tnp/screens/Notification/notification.dart';
 import 'package:tnp/screens/PastData/PastData.dart';
 import 'package:tnp/screens/Profile/profile.dart';
+import 'package:tnp/screens/Resumes/resume.dart';
+import 'package:tnp/screens/Resumes/sample1.dart';
 import 'package:tnp/screens/UserCompanyList/user_search_page.dart';
 import 'package:tnp/screens/drawer/drawer.dart';
 import 'package:tnp/screens/home/home.dart';
@@ -40,8 +43,8 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xFFFED408),
       ),
 
+      //  home: ProfilePage(),
       home: SplashScreen(),
-      //  home: JobDetail_Page(),
     );
   }
 }

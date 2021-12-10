@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tnp/screens/Notification/notification.dart';
 import 'package:tnp/screens/Profile/profile.dart';
 import 'package:tnp/screens/drawer/drawer.dart';
 import 'package:tnp/widgets/themes.dart';
@@ -52,28 +53,37 @@ class HomeAppBar extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Container(
-                margin: EdgeInsets.only(top: 30, right: 10),
-                transform: Matrix4.rotationZ(100),
-                child: Stack(
-                  children: [
-                    Icon(
-                      Icons.notifications_none_outlined,
-                      size: 30,
-                      color: Colors.grey,
-                    ),
-                    Positioned(
-                      top: 0,
-                      right: 0,
-                      child: Container(
-                        padding: EdgeInsets.all(2),
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          shape: BoxShape.circle,
-                        ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Notification_Page()),
+                  );
+                },
+                child: Container(
+                  margin: EdgeInsets.only(top: 30, right: 10),
+                  transform: Matrix4.rotationZ(100),
+                  child: Stack(
+                    children: [
+                      Icon(
+                        Icons.notifications_none_outlined,
+                        size: 30,
+                        color: Colors.grey,
                       ),
-                    )
-                  ],
+                      Positioned(
+                        top: 0,
+                        right: 0,
+                        child: Container(
+                          padding: EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               SizedBox(width: 7),

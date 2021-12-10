@@ -7,7 +7,7 @@ import 'package:tnp/screens/search/search_page.dart';
 import 'package:tnp/widgets/themes.dart';
 
 User user =
-    User('aditya', '898989', 'email', 'password', 'rollno', 'year', 'branch');
+    User('name', 'phone', 'email', 'password', 'rollno', 'year', 'branch');
 
 class AdminLoginScreen extends StatefulWidget {
   const AdminLoginScreen({Key? key}) : super(key: key);
@@ -144,29 +144,34 @@ class StartState extends State<AdminLoginScreen> {
           ),
         ),
         GestureDetector(
-          onTap: () async {
-            DocumentSnapshot temp = await FirebaseFirestore.instance
-                .collection('user')
-                .doc(email)
-                .get();
-            if (temp != null) {
-              user.name = temp.get('name');
-              user.email = temp.get('email');
-              user.phone = temp.get('phone');
-              user.branch = temp.get('branch');
-              user.rollno = temp.get('rollno');
-              user.year = temp.get('year');
+          // onTap: () async {
+          //   DocumentSnapshot temp = await FirebaseFirestore.instance
+          //       .collection('user')
+          //       .doc(email)
+          //       .get();
+          //   if (temp != null) {
+          //     user.name = temp.get('name');
+          //     user.email = temp.get('email');
+          //     user.phone = temp.get('phone');
+          //     user.branch = temp.get('branch');
+          //     user.rollno = temp.get('rollno');
+          //     user.year = temp.get('year');
 
-              if (temp.get('isAdmin')) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SearchPage()),
-                );
-              }
-            }
+          //     if (temp.get('isAdmin')) {
+          //       Navigator.push(
+          //         context,
+          //         MaterialPageRoute(builder: (context) => SearchPage()),
+          //       );
+          //     }
+          //   }
 
-            return;
-
+          //   return;
+          // },
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SearchPage()),
+            );
           },
           child: Container(
             alignment: Alignment.center,

@@ -28,7 +28,7 @@ class JobDetail_Page extends StatelessWidget {
                 JobDetail_AppBar(),
                 SizedBox(height: 30),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     // Container(
                     //   height: 40,
@@ -40,7 +40,14 @@ class JobDetail_Page extends StatelessWidget {
                     //   ),
                     // ),
                     Container(
-                      margin: EdgeInsets.only(),
+                      child: FaIcon(
+                        FontAwesomeIcons.building,
+                        color: MyThemes.blueColor,
+                      ),
+                    ),
+                    Container(
+                      width: 260,
+                      margin: EdgeInsets.symmetric(horizontal: 8),
                       child: Text(
                         job.companyName,
                         style: TextStyle(
@@ -64,15 +71,27 @@ class JobDetail_Page extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20),
-                Container(
-                  child: Text(
-                    job.jobProfile,
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                Row(
+                  children: [
+                    Container(
+                      child: FaIcon(
+                        FontAwesomeIcons.building,
+                        color: MyThemes.blueColor,
+                      ),
                     ),
-                  ),
+                    Container(
+                      width: 260,
+                      margin: EdgeInsets.symmetric(horizontal: 8),
+                      child: Text(
+                        job.jobProfile,
+                        style: TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(height: 15),
                 Column(
@@ -83,7 +102,10 @@ class JobDetail_Page extends StatelessWidget {
                       children: [
                         Container(
                           width: 235,
-                          child: IconText(Icons.attach_money_sharp, job.salary),
+                          child: IconText(
+                            Icons.attach_money_sharp,
+                            job.salary,
+                          ),
                         ),
                         IconText(Icons.access_time_outlined, job.jobType),
                       ],
@@ -121,49 +143,87 @@ class JobDetail_Page extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 30),
+
                 Container(
-                  margin: EdgeInsets.only(left: 25),
-                  child: Text(
-                    'Description',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      fontSize: 24,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 10),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  padding: EdgeInsets.all(5),
-                  height: 100,
+                  alignment: Alignment.center,
+                  // margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  padding:
+                      EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+                  height: 200,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey),
-                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                          offset: Offset(0, 10),
+                          blurRadius: 50,
+                          color: Color(0xffEEEEEE)),
+                    ],
                   ),
-                  child: Text(
-                    job.description,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      fontSize: 18,
-                    ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(
+                                left: 10, right: 10, top: 10, bottom: 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.grey[100],
+                              boxShadow: [
+                                BoxShadow(
+                                    offset: Offset(0, 10),
+                                    blurRadius: 50,
+                                    color: Color(0xffEEEEEE)),
+                              ],
+                            ),
+                            child: FaIcon(
+                              FontAwesomeIcons.pen,
+                              color: MyThemes.blueColor,
+                            ),
+                          ),
+                          SizedBox(width: 10),
+                          Text(
+                            'Description ',
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        width: 350,
+                        height: 120,
+                        padding: EdgeInsets.only(
+                            left: 10, right: 10, top: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey[100],
+                        ),
+                        child: Text(
+                          job.description,
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                Container(
-                    margin: EdgeInsets.symmetric(vertical: 25),
-                    height: 45,
-                    width: double.maxFinite,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          elevation: 0,
-                          primary: Theme.of(context).primaryColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          )),
-                      onPressed: () {},
-                      child: Text("Apply Now"),
-                    ))
+
+                // Container(
+                //     margin: EdgeInsets.symmetric(vertical: 25),
+                //     height: 45,
+                //     width: double.maxFinite,
+                //     child: ElevatedButton(
+                //       style: ElevatedButton.styleFrom(
+                //           elevation: 0,
+                //           primary: Theme.of(context).primaryColor,
+                //           shape: RoundedRectangleBorder(
+                //             borderRadius: BorderRadius.circular(20),
+                //           )),
+                //       onPressed: () {},
+                //       child: Text("Apply Now"),
+                //     ))
               ],
             )));
   }

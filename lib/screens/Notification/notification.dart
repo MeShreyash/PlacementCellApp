@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tnp/widgets/themes.dart';
 
-class FAQ_Page extends StatelessWidget {
-  const FAQ_Page({Key? key}) : super(key: key);
+class Notification_Page extends StatelessWidget {
+  const Notification_Page({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'FAQs',
+          'Notifications',
         ),
         titleSpacing: 00.0,
         centerTitle: true,
         toolbarHeight: 60.2,
         elevation: 0.00,
-        backgroundColor: MyThemes.greenColor,
+        backgroundColor: MyThemes.blueColor,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -55,14 +55,14 @@ class FAQ_Page extends StatelessWidget {
                           ],
                         ),
                         child: FaIcon(
-                          FontAwesomeIcons.question,
-                          color: MyThemes.greenColor,
+                          FontAwesomeIcons.bell,
+                          color: MyThemes.blueColor,
                         ),
                       ),
                       SizedBox(width: 10),
                       Text(
-                        'Are projects important for a \nTech job?',
-                        style: TextStyle(fontSize: 18),
+                        'New Company',
+                        style: TextStyle(fontSize: 22),
                       ),
                     ],
                   ),
@@ -79,72 +79,7 @@ class FAQ_Page extends StatelessWidget {
                       color: Colors.grey[100],
                     ),
                     child: Text(
-                      'Yes. Project shows your capability to build projects and understand code. It gives you an edge over other students.',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-              padding:
-                  EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
-              height: 140,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                      offset: Offset(0, 10),
-                      blurRadius: 50,
-                      color: Color(0xffEEEEEE)),
-                ],
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(
-                            left: 10, right: 10, top: 10, bottom: 10),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.grey[100],
-                          boxShadow: [
-                            BoxShadow(
-                                offset: Offset(0, 10),
-                                blurRadius: 50,
-                                color: Color(0xffEEEEEE)),
-                          ],
-                        ),
-                        child: FaIcon(
-                          FontAwesomeIcons.question,
-                          color: MyThemes.greenColor,
-                        ),
-                      ),
-                      SizedBox(width: 10),
-                      Text(
-                        'Is Amazon available for \nBiotech student? ',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    width: 350,
-                    height: 50,
-                    padding: EdgeInsets.only(
-                        left: 10, right: 10, top: 10, bottom: 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.grey[100],
-                    ),
-                    child: Text(
-                      'Yes. ',
+                      'A new company has been added to the list. \nGo check it out and apply.',
                       style: TextStyle(fontSize: 18),
                     ),
                   ),
@@ -185,14 +120,14 @@ class FAQ_Page extends StatelessWidget {
                           ],
                         ),
                         child: FaIcon(
-                          FontAwesomeIcons.question,
-                          color: MyThemes.greenColor,
+                          FontAwesomeIcons.bell,
+                          color: MyThemes.blueColor,
                         ),
                       ),
                       SizedBox(width: 10),
                       Text(
-                        'Can engineering student apply \nfor Non-tech jobs? ',
-                        style: TextStyle(fontSize: 18),
+                        'Resources Updated',
+                        style: TextStyle(fontSize: 22),
                       ),
                     ],
                   ),
@@ -209,7 +144,7 @@ class FAQ_Page extends StatelessWidget {
                       color: Colors.grey[100],
                     ),
                     child: Text(
-                      'Yes. The students of any branch can apply for jobs in non-tech field. Your selection depends on your knowledge of the subject.',
+                      'Some new resources have been uploaded for the students.\n Student can take its help for better planning and resume building.',
                       style: TextStyle(fontSize: 18),
                     ),
                   ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tnp/screens/Bookmark/bookmark.dart';
+import 'package:tnp/screens/Notification/notification.dart';
 import 'package:tnp/screens/Profile/profile.dart';
 import 'package:tnp/screens/Resumes/resume.dart';
 import 'package:tnp/screens/UserCompanyList/user_search_page.dart';
@@ -109,16 +109,17 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               BottomNavigationBarItem(
-                label: 'Bookmark',
+                label: 'Notifications',
                 icon: GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Bookmark_Page()),
+                      MaterialPageRoute(
+                          builder: (context) => Notification_Page()),
                     );
                   },
                   child: Icon(
-                    Icons.bookmark_add_outlined,
+                    Icons.notifications_none_outlined,
                     size: 40,
                   ),
                 ),

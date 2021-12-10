@@ -30,7 +30,7 @@ class SearchAppBar extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(left: 10, right: 100),
+            padding: EdgeInsets.only(left: 10, right: 50),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

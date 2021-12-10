@@ -361,7 +361,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Have Already Member?  "),
+                  Text("Are Already Member?  "),
                   GestureDetector(
                     child: Text(
                       "Login Now",
