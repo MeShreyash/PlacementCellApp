@@ -2,7 +2,9 @@
 
 ## Screenshots
 
-<img src = "ss/" >
+<img src = "ss/splash" >
+
+![](ss/splash)
 
 
 This project is a starting point for a Flutter application.
