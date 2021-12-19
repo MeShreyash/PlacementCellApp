@@ -1,8 +1,9 @@
-# tnp
+# TnP App
 
-A new Flutter project.
+## Screenshots
 
-## Getting Started
+<img src = "ss/" >
+
 
 This project is a starting point for a Flutter application.
 
